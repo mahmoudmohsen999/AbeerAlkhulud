@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Collection | AbeerAlkhulud </title>
+  <!-- style css -->
+  <link rel="stylesheet" href="assets/style/style.css">
+  <!-- icon -->
+  <link rel="icon" href="assets/img/AA.png" type="image/x-icon">
+
+  <!-- font goagle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- loading screen -->
+<div id="loading-screen">
+    <div class="content">
+      <div class="spinner"></div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+  <!-- end loading screen -->
+  <!-- header -->
+<header>
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="logo fade-in-up-3">
+        <a href="#Home"><img src="assets/img/logo.png" alt="Logo"></a>
+      </div> 
+        <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="nav-links fade-in-up-4">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Perfume" class="Perfume-link-hamburger">Perfume</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-btn">Perfume ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#Perfume">For Men</a></li>
+            <li><a href="#Perfume">For Women</a></li>
+            <li><a href="#Perfume">Unisex</a></li>
+          </ul>
+        </li>
+        <li><a href="#explores">Explores</a></li>
+        <li><a href="#Gifts">Gifts</a></li>
+        <li><a href="#Contact">Contact Us</a></li>
+      </ul>
+
+      <div class="icons_nav fade-in-up-2">
+        <a href="#" id="cart" class="cart-link">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge" id="cart-count">0</span>
+        </a>
+        <a href="user-login.html" class="" id="user">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <div class="search-box">
+          <a href="#" id="search" class="">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <form action="" id="search-form">
+            <input type="search" name="search" id="search-input" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+
+    </div> 
+  </nav>
+</header>
+  <!-- end header -->
+
+
+   <!-- main -->
+<main id="Home">
+    <!-- <div class="container"> -->
+      <div class="sec-main">
+          <video autoplay muted loop playsinline id="bg-video">
+            <source src="assets/img/video.mp4" type="video/mp4">
+            متصفحك لا يدعم الفيديو.
+          </video>
+        <div class="paragraph-main fade-in-up">
+          <h2>What feeling are you looking for today?</h2>
+          <p class="text-main-p">Start your fragrance journey in less than a minute. We'll define your taste and recommend 3 special scents that were created just for you.</p>
+          <div class="btn-main fade-in-up">
+            <button id="btn-main-1" class="mainbutton"><span>Start Now </span></button> 
+            <button id="btn-main-2" class="secondarybutton"><span>Try Now </span></button> 
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+     
+  </main>
+  <!-- end main -->
+<!-- Modal -->
+<div id="quizModal" class="modal hidden">
+  <div class="modal-content" id="modalBox">
+    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+    <div id="quizContent">
+    </div>
+  </div>
+</div>
+<!-- Cart Sidebar Checkout -->
+<aside id="cartSidebar" class="cart-sidebar " aria-hidden="true">
+  <div class="cart-header">
+    <strong class="cart-title">Cart</strong>
+    <button class="close-btn" id="closeCartBtn" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <div id="cart-items" class="cart-items" role="list"></div>
+
+  <div class="cart-footer">
+    <div class="totals">
+      <div class="row">
+        <span>Subtotal</span>
+        <span id="subtotal">$0.00</span>
+      </div>
+      <div class="cart-footer">
+        <button id="checkoutBtn" class="checkout-btn mainbutton" type="button"><span>Checkout</span></button>
+        <button id="clearCartBtn" class="clear-btn">Clear all</button>
+      </div>
+</aside>
+
+
+<!-- start Perfume -->
+<section id="Perfume">
+    <h3 class="title-perfume fade-in-up">OUR BEST SELLERS</h2>
+    <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="women">WOMEN'S BEST SELLERS</button>
+    <button class="filter-btn" data-filter="men">MEN'S BEST SELLERS</button>
+  </div>
+  <div class="products container" style="padding: 30px 0;">
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product1-img">
+      <img src="assets/img/perfume1.1.png" class="front">
+      <img src="assets/img/perfume1.png" class="back">
+    </div>
+      <h3 class="product-title">HYPNOTIC MUSK</h3>
+      <p class="product-price" data-price="50">$49.99</p>
+      <div data-tooltip="Price:$49.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product2-img">
+      <img src="assets/img/perfume2.2.png" class="front">
+      <img src="assets/img/perfume2.png" class="back">
+    </div>
+      <h3 class="product-title">YLANG IN GOLD</h3>
+      <p class="product-price" data-price="60">$59.99</p>
+      <div data-tooltip="Price:$59.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+        <div class="product3-img">
+          <img src="assets/img/perfume3.3.png" class="front">
+          <img src="assets/img/perfume3.png" class="back">
+        </div>
+      <h3 class="product-title">Ô FÉMININ</h3>
+      <p class="product-price" data-price="80">$79.99</p>
+      <div data-tooltip="Price:$79.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product4-img">
+      <img src="assets/img/perfume4.4.png" class="front">
+      <img src="assets/img/perfume4.png" class="back">
+    </div>
+      <h3 class="product-title">PURE EXTRÊME</h3>
+      <p class="product-price" data-price="50">$49.99</p>
+      <div data-tooltip="Price:$49.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product9-img">
+      <img src="assets/img/perfume9.9.png" class="front">
+      <img src="assets/img/perfume9.png" class="back">
+    </div>
+      <h3 class="product-title">SOLEIL PASSION</h3>
+      <p class="product-price" data-price="80">$79.99</p>
+      <div data-tooltip="Price:$79.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product10-img">
+      <img src="assets/img/perfume10.10.png" class="front">
+      <img src="assets/img/perfume10.png" class="back">
+    </div>
+      <h3 class="product-title">NOTE VANILLÉE</h3>
+      <p class="product-price" data-price="60">$59.99</p>
+      <div data-tooltip="Price:$59.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product11-img">
+      <img src="assets/img/perfume11.11.png" class="front">
+      <img src="assets/img/perfume11.png" class="back">
+    </div>
+      <h3 class="product-title">ROYAL MUSKA</h3>
+      <p class="product-price" data-price="50">$49.99</p>
+      <div data-tooltip="Price:$49.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal women" id="ForWomen">
+    <div class="product12-img">
+      <img src="assets/img/perfume12.12.png" class="front">
+      <img src="assets/img/perfume12.png" class="back">
+    </div>
+      <h3 class="product-title">GLAMOUR</h3>
+      <p class="product-price" data-price="80">$79.99</p>
+      <div data-tooltip="Price:$79.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal men" id="ForMen">
+    <div class="product5-img">
+      <img src="assets/img/perfume5.5.png" class="front">
+      <img src="assets/img/perfume5.png" class="back">
+    </div>
+      <h3 class="product-title">GNTONIC</h3>
+      <p class="product-price" data-price="50">$49.99</p>
+      <div data-tooltip="Price:$49.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal men" id="ForMen">
+    <div class="product6-img">
+      <img src="assets/img/perfume6.6.png" class="front">
+      <img src="assets/img/perfume6.png" class="back">
+    </div>
+      <h3 class="product-title">DESIRTOXIC L'INTENSE</h3>
+      <p class="product-price" data-price="60">$59.99</p>
+      <div data-tooltip="Price:$59.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product scroll-reveal men" id="ForMen">
+    <div class="product7-img">
+      <img src="assets/img/perfume7.7.png" class="front">
+      <img src="assets/img/perfume7.png" class="back">
+    </div>
+      <h3 class="product-title">DESIRTOXIC</h3>
+      <p class="product-price" data-price="50">$49.99</p>
+      <div data-tooltip="Price:$49.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+    
+    <article class="product scroll-reveal men" id="ForMen">
+    <div class="product8-img">
+      <img src="assets/img/perfume8.8.png" class="front">
+      <img src="assets/img/perfume8.png" class="back">
+    </div>
+      <h3 class="product-title">DELICE</h3>
+      <p class="product-price" data-price="80">$79.99</p>
+      <div data-tooltip="Price:$79.99" class="cartbutton">
+      <div id="add-to-cart" class="button-wrapper add-to-cart">
+        <div class="text">Add to Cart</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- end perfume -->
+
+<!-- start explores -->
+<section id="explores">
+  <div class="container">
+    <div class="explores">
+        <button id="prevBtn" class="prevBtn">
+          &#10094;
+        </button>
+        <div class="discover">
+          <div id="slider" class="slider-track">
+            <div class="explore">
+              <div class="img-explore">  
+                  <img src="assets/img/explore1.png" alt="offer">
+              </div>
+                <div class="text-explore scroll-reveal">
+                  <h2>Nectars: Discover AbeerAlkhulud’s feminine perfume extracts</h2> 
+                  <p>Opt for the concentrated version of your favorite fragrance with AbeerAlkhulud nectars. Luxurious, feminine perfume extracts in jewel-like bottles.</p>
+                <button class="mainbutton"><span>Read More </span></button> 
+                </div>
+              </div>
+              <div class="explore">
+                <div class="img-explore scroll-reveal">  
+                  <img src="assets/img/explore2.png" alt="offer">
+                </div>
+                <div class="text-explore">
+                  <h2>Men's fragrances: The new 50 ml format from the Jewel collection</h2> 
+                  <p>Discover the men's and unisex fragrances from the Jewel collection in 50 ml format. Elegant, practical, and always..</p>
+                <button class="mainbutton"><span>Read More </span></button>
+                </div>
+              </div>
+              <div class="explore">
+                <div class="img-explore scroll-reveal">  
+                  <img src="assets/img/explore3.png" alt="offer">
+                </div>
+                <div class="text-explore">
+                  <h2>Home Collection</h2> 
+                  <p>When niche perfume dresses your interior</p>
+                <button class="mainbutton"><span>Read More </span></button>
+                </div>
+              </div>
+              <div class="explore">
+              <div class="img-explore scroll-reveal">  
+                <img src="assets/img/explore4.png" alt="offer">
+              </div>
+              <div class="text-explore">
+                <h2>Create a luxurious atmosphere in your home</h2> 
+                <p>AbeerAlkhulud's guide to perfuming your home</p>
+                <button class="mainbutton"><span>Read More </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="nextBtn" class="nextBtn">
+          &#10095;
+        </button>
+
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end explores -->
+
+<!-- start gift -->
+<section id="Gifts">
+  <div class="container">
+    <div class="gifts">
+      <div class="gift-card scroll-reveal">
+        <div class="gift-img-wrapper">
+          <img src="assets/img/gift1.png" class="gift-img" alt="Gift 1">
+        </div>
+        <p class="gift-text">GIFT WRAPPING OFFERED</p>
+      </div>
+
+      <div class="gift-card scroll-reveal">
+        <div class="gift-img-wrapper">
+          <img src="assets/img/gift2.png" class="gift-img" alt="Gift 2">
+        </div>
+        <p class="gift-text">FREE SAMPLES</p>
+      </div>
+
+      <div class="gift-card scroll-reveal">
+        <div class="gift-img-wrapper">
+          <img src="assets/img/gift3.png" class="gift-img" alt="Gift 3">
+        </div>
+        <p class="gift-text">CUSTOM ENGRAVING OFFERED</p>
+      </div>
+
+      <div class="gift-card scroll-reveal">
+        <div class="gift-img-wrapper">
+          <img src="assets/img/gift4.png" class="gift-img" alt="Gift 4">
+        </div>
+        <p class="gift-text">FREE BAG SPRAY</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end gift -->
+
+<!-- start contact -->
+<footer id="Contact">
+  <div class="container">
+    <div class="footer-content scroll-reveal">
+      <!-- About Info -->
+      <div class="about-info">
+        <div class="logo-footer">
+          <a href="#Home"><img src="assets/img/logo1.png" alt="Logo"></a>
+        </div> 
+        <div class="hr">
+        </div>
+        <p><i class="fa-solid fa-location-dot"></i> Address: <span>123 Main Street, City, Country</span></p>
+        <p><i class="fa-solid fa-phone"></i> Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:disfrutar@gmail.com" >AbeerAlkhulud@gmail.com</a></p>
+        <p><i class="fa-solid fa-user"></i> Website: <a href="https://www.disfrutar.com" >www.AbeerAlkhulud.com</a></p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <a href="#Home" class="Home">Home</a>
+        <a href="#Perfume" class="Perfume">Perfume</a>
+        <a href="#Gifts" class="Gifts">Gifts</a>
+        <a href="#Contact" class="Contact">Contact</a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="social-media">
+        <h2>Follow Us On</h2>
+        <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.twitter.com" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.linkedin.com" class="linkedin"><i class="fab fa-linkedin-in"></i> Linkedin</a>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+  <!-- end footer -->
+<div class="footer-hr">
+  </div>
+  <!-- start footer small -->
+<footer> 
+  <div class="container">
+    <div class="footer-bottom ">
+        <p class="copyright">© 2025 Your AbeerAlkhulud. All rights reserved.</p>
+      <div class="payment-methods">
+        <div class="payment-card">
+          <img src="https://static.seekingalpha.com/uploads/2020/9/9/saupload_am_amex_06.jpg" alt="Apple Pay">
+        </div>
+        <div class="payment-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+        </div>
+        <div class="payment-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+        </div>
+        <div class="payment-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <!-- end footer small -->
+  <!-- script -->
+  <script src="assets/js/main.js"></script>
+<div id="fx-layer" aria-hidden="true"></div>
+</body>
+</html>

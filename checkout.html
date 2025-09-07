@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Checkout | AbeerAlkhulud </title>
+  <link rel="icon" href="assets/img/AA.png" type="image/x-icon">
+
+  <!-- font goagle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/style/checkout.css" >
+</head>
+<body>
+  <div class="checkout-container">
+  <header>
+    <nav class="navbar">
+    <div class="container">
+      <div class="logo fade-in-up-2">
+        <a href="index.html"><img src="assets/img/logo1.png" alt="Logo"></a>
+      </div> 
+      <div class="icons_nav">
+        <a href="#" id="cart" class="cart-link fade-in-up-2">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge" id="cart-count">0</span>
+        </a>
+      </div>
+
+    </div> 
+    </nav>
+  </header>
+  <!-- Left: Billing Details -->
+
+    <div class="billing">
+      <h3 class="Express">Express checkout</h3>
+      <div class="buttonsSP">
+      <button class="shopBtn">Shop</button>
+      <button class="paypalBtn">Pay<span>Pal</span></button>
+      </div>
+      <div class="lineout"></div>
+      <form>
+        <div class="contact">
+          <label class="label">Contact</label>
+          <a href="user-login.html" class="login">log in</a>
+        </div>
+        <input type="email" id="email" class="email" placeholder="email">
+        <span id="email-status"></span>
+
+
+        <div class="newsletter">
+          <input type="checkbox" id="subscribe" class="checkbox">
+          <label for="subscribe" class="checkbox-label">Email me with news and offers</label>
+        </div>
+
+        <label class="label">Delivery</label>
+        <select class="country">
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="sa">Saudi Arabia</option>
+          <option value="ae">United Arab Emirates</option>
+          <option value="eg" selected>Egypt</option>
+          <option value="kw">Kuwait</option>
+          <option value="qa">Qatar</option>
+          <option value="bh">Bahrain</option>
+          <option value="om">Oman</option>
+          <option value="jo">Jordan</option>
+          <option value="lb">Lebanon</option>
+          <option value="in">India</option>
+          <option value="pk">Pakistan</option>
+          <option value="bd">Bangladesh</option>
+        </select>
+
+        <div class="row">
+        <input type="text" class="Firstname" placeholder="First Name">
+        <input type="text" class="Lastname" placeholder="Last Name">
+        </div>
+
+        <input type="text" class="address" placeholder="Address">
+
+        <input type="text" class="apartment" placeholder="Apatment, Suite, etc(optional)">
+        
+        <div class="row">
+        <input type="text" placeholder="City" class="city">
+        <input type="text" placeholder="postal code (optional)" class="postalcode">
+        </div>
+        
+        <input type="text" id="phone" class="phone" placeholder="Phone">
+        <span id="phone-status"></span>
+      </form>
+          <h2 class="secure-text-h2">Payment</h2>
+          <p class="secure-text-p">All transactions are secure and encrypted.</p>
+
+          <!-- Credit Card -->
+            <div class="cart-sec">
+              <div class="credit-option">
+              <span>Credit card</span>
+                <div class="icons">
+                  <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                  <img src="https://img.icons8.com/color/48/mastercard.png" alt="MasterCard">
+                  <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+                </div>
+              </div>
+            </div>
+              <input type="text" class="cardnumber"  id="cardNum"placeholder="Card number">
+              <div class="row">
+              <input type="text" class="Lastname" id="expDate" placeholder="Expiration date (MM/YY)">
+              <input type="text" class="Firstname" id="cvv" placeholder="Security code">
+              </div>
+              <input type="text" class="cardname" id="cardName" placeholder="Name on card">
+          </label>
+
+          <section class="payment">
+          <!-- PayPal -->
+          <label class="payment-option">
+            <input type="radio" name="payment" >
+            <div class="option-content">
+              <span>PayPal</span>
+              <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal" class="paypal-logo">
+            </div>
+            <div class="option-details">
+              <img src="assets/img/cart1.png" class="cart-img">
+              <p>After clicking "Pay with PayPal", you will be redirected to PayPal to complete your purchase securely.</p>
+            </div>
+          </label>
+
+          <!-- Klarna -->
+          <label class="payment-option">
+            <input type="radio" name="payment">
+            <div class="option-content Klarna">
+              <span>Klarna - Flexible payments</span>
+              <img src="https://owp.klarna.com/legacy/assets/sites/15/2020/02/18101935/klarna-og.png" alt="Klarna" class="klarna-logo">
+            </div>
+            <div class="option-details">
+              <img src="assets/img/cart1.png" class="cart-img">
+              <p>After you review your order, you will be redirected to Klarna - Flexible payments to complete your purchase securely.</p>
+            </div>
+          </label>
+        </section>
+        <button class="mainbutton">Review Order</button>
+
+      <div class="lineout"></div>
+      <div class="policy">
+        <a href="">Privacy policy</a>
+        <a href="">Terms of service</a>
+        <a href="">Shipping</a>
+        <a href="">Terms of sale</a>
+        <a href="">Contact</a>
+      </div>
+    </div>
+
+<!-- Right: Order Summary -->
+<div class="summary" id="orderSummary">
+  <h2>Order Summary</h2>
+  <div id="summaryItems" class="summaryItems"></div>
+  <div class="lineout"></div>
+
+  <div class="totals">
+    <div><span>Subtotal</span><span id="summarySubtotal">$0.00</span></div>
+    <div><span>Shipping</span><span id="summaryShipping">$10.00</span></div>
+    <div class="total"><span>Total</span><span id="summaryTotal">$0.00</span></div>
+  </div>
+</div>
+
+<script>
+// checkout-page.js
+document.addEventListener('DOMContentLoaded', () => {
+  const itemsWrap = document.getElementById('summaryItems');
+  const subEl = document.getElementById('summarySubtotal');
+  const shipEl = document.getElementById('summaryShipping');
+  const totalEl = document.getElementById('summaryTotal');
+
+  const cart = JSON.parse(localStorage.getItem('checkoutCart') || '{}');
+
+  if (!cart || Object.keys(cart).length === 0) {
+    alert('Your cart is empty.');
+    window.location.replace('index.html'); 
+    return;
+  }
+
+  let subtotal = 0;
+  itemsWrap.innerHTML = '';
+
+  Object.values(cart).forEach(item => {
+    subtotal += item.price * item.qty;
+    const row = document.createElement('div');
+    row.className = 'item';
+    row.innerHTML = `
+      <img src="${item.imgSrc}" alt="${item.name}" width="60" height="60" style="object-fit:cover;border-radius:8px">
+      <div class="info">
+        <h4>${item.name}</h4>
+        <p>Qty: ${item.qty}</p>
+      </div>
+      <span class="price">$${(item.price * item.qty).toFixed(2)}</span>
+    `;
+    itemsWrap.appendChild(row);
+  });
+
+  const shipping = 10.00; 
+  subEl.textContent = `$${subtotal.toFixed(2)}`;
+  shipEl.textContent = `$${shipping.toFixed(2)}`;
+  totalEl.textContent = `$${(subtotal + shipping).toFixed(2)}`;
+
+  document.getElementById('proceedBtn')?.addEventListener('click', ()=>{
+    alert('You have completed your order. We will contact you for payment.');
+  });
+});
+// ------- Card Number -------
+const cardNumInput = document.getElementById("cardNum");
+cardNumInput.addEventListener("input", () => {
+  let value = cardNumInput.value.replace(/\D/g, "");
+  value = value.slice(0, 16); 
+  cardNumInput.value = value.replace(/(.{4})/g, "$1 ").trim();
+});
+
+// ------- Expiration Date (MM/YY) -------
+const expDateInput = document.getElementById("expDate");
+expDateInput.addEventListener("input", () => {
+  let value = expDateInput.value.replace(/\D/g, ""); 
+  value = value.slice(0, 4);
+  if (value.length > 2) {
+    value = value.slice(0, 2) + "/" + value.slice(2);
+  }
+  expDateInput.value = value;
+});
+
+// ------- CVV -------
+const cvvInput = document.getElementById("cvv");
+cvvInput.addEventListener("input", () => {
+  let value = cvvInput.value.replace(/\D/g, ""); 
+  value = value.slice(0, 3); 
+  cvvInput.value = value;
+});
+</script>
+
+</body>
+</html>
